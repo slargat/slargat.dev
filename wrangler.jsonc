@@ -1,6 +1,9 @@
 {
 	"name": "slargat-dev",
 	"pages_build_output_dir": "./dist",
+	"env": {
+		"production": {}
+	},
 	"observability": {
 		"enabled": true
 	}
