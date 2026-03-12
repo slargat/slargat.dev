@@ -9,6 +9,7 @@ interface Props {
 const { title } = Astro.props;
 
 const { name, image, summary, url, location, theme } = basics;
+const description = (basics as { seoDescription?: string }).seoDescription ?? summary;
 const ogImage = `${url}${image}`;
 const jsonLd = {
 	"@context": "https://schema.org",
@@ -16,7 +17,7 @@ const jsonLd = {
 	name,
 	url,
 	image: ogImage,
-	description: summary,
+	description,
 	jobTitle: basics.label,
 	address: {
 		"@type": "PostalAddress",
@@ -33,7 +34,7 @@ const jsonLd = {
 	<head>
 		<meta charset="UTF-8" />
 		<title>{title}</title>
-		<meta name="description" content={summary} />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="author" content={name} />
 		<meta name="robots" content="index, follow" />
@@ -44,7 +45,7 @@ const jsonLd = {
 		<meta property="og:url" content={url} />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content={title} />
-		<meta property="og:description" content={summary} />
+		<meta property="og:description" content={description} />
 		<meta property="og:image" content={ogImage} />
 		<meta property="og:image:alt" content={`${name} profile photo`} />
 		<meta property="og:locale" content="en_US" />
@@ -54,16 +55,21 @@ const jsonLd = {
 		<meta property="twitter:domain" content={url.split("//")[1] ?? ""} />
 		<meta property="twitter:url" content={url} />
 		<meta name="twitter:title" content={title} />
-		<meta name="twitter:description" content={summary} />
+		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content={ogImage} />
 		<meta name="twitter:image:alt" content={`${name} profile photo`} />
 
-		<script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+		<script
+			is:inline
+			type="application/ld+json"
+			set:html={JSON.stringify(jsonLd)}
+		/>
 
 		<link
 			rel="stylesheet"
 			href="https://fonts.googleapis.com/css2?family=Itim"
 		/>
+		<link rel="sitemap" href="/sitemap-index.xml" />
 	</head>
 	<body data-theme={theme} class="relative bg-skin-fill">
 		<div class="absolute top-0 -z-10 h-full w-full print:hidden">

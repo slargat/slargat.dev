@@ -3,11 +3,12 @@
   "basics": {
     "name": "Seifeddine LARGAT",
     "label": "Senior Web Developer",
-    "image": "/me_avatar.jpg",
+    "image": "/profile.jpg",
     "email": "seifeddine.largat@outlook.com",
     "phone": "(33) 07 53 93 88 19",
     "url": "https://slargat.dev",
     "summary": "Tech Lead and Senior Full-Stack Developer with 7+ years of experience specializing in JavaScript, TypeScript and PHP web stacks. I have worked with major CAC 40 companies and innovative startups, leading technical teams, establishing guidelines and best practices, driving cloud architecture decisions (AWS), and implementing CI/CD automation. My strong communication skills and commitment to delivery have consistently ensured project success at every stage.",
+    "seoDescription": "Senior Full-Stack Developer & Tech Lead with 7+ years of experience in JavaScript, TypeScript, Angular & Node.js. Worked with TotalEnergies, EDF and Air Liquide.",
     "theme": "default",
     "location": {
       "address": "115 Avenue Maurice Berteaux",
@@ -628,10 +629,16 @@
   ],
   "certificates": [
     {
-      "name": "GenAI Level 1",
-      "date": "2024-01-01",
+      "name": "Sustainable IT Fundamentals - Sustainability",
+      "date": "2025-06-30",
       "issuer": "Devoteam",
-      "url": ""
+      "url": "https://devoteam.com"
+    },
+    {
+      "name": "GenAI Level 1",
+      "date": "2024-09-30",
+      "issuer": "Devoteam",
+      "url": "https://devoteam.com"
     }
   ],
   "languages": [
@@ -690,7 +697,7 @@
       ],
       "isActive": "",
       "github": "",
-      "url": "",
+      "url": "https://espace-client.pro.engie.fr",
       "startDate": "2020-09-01"
     },
     {
@@ -743,7 +750,7 @@
         "Useful for: When you want to use a login and password on the desktop, you don't have to type it. Go to your MyCena app and touch to copy. Then click the field and select Paste.",
         "When you want to copy a login or password from your desktop onto your MyCena mobile app. On your desktop, select and copy the text. Then touch and select paste on your MyCena mobile app."
       ],
-      "url": "",
+      "url": "https://chromewebstore.google.com/detail/iffbhddlimgilbikojjehaikkckjajah?utm_source=item-share-cb",
       "startDate": "2019-03-01",
       "endDate": "2019-06-01"
     },
@@ -751,7 +758,7 @@
       "name": "Byblos ERP",
       "description": "",
       "highlights": [],
-      "url": "",
+      "url": "https://www.talan.com/",
       "isActive": "",
       "github": "",
       "startDate": "2018-02-01",
@@ -763,7 +770,7 @@
       "highlights": [],
       "isActive": "",
       "github": "",
-      "url": "",
+      "url": "https://www.instagram.com/eventmdress/",
       "startDate": "2017-12-01",
       "endDate": "2018-02-01"
     },
@@ -773,7 +780,7 @@
       "highlights": [],
       "isActive": "",
       "github": "",
-      "url": "",
+      "url": "https://kalbi.tn",
       "startDate": "2016-11-01",
       "endDate": "2017-02-01"
     },
@@ -783,7 +790,7 @@
       "highlights": [],
       "isActive": "",
       "github": "",
-      "url": "",
+      "url": "https://business-book.tn",
       "startDate": "2016-02-01",
       "endDate": "2016-06-01"
     }
