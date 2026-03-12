@@ -4,6 +4,9 @@
 	"env": {
 		"production": {}
 	},
+	"assets": {
+		"directory": "public"
+	},
 	"observability": {
 		"enabled": true
 	}

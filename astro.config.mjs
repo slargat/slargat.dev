@@ -24,5 +24,6 @@ export default defineConfig({
   adapter: cloudflare({
     mode: 'directory',
     imageService: 'cloudflare',
+    prerenderEnvironment: 'node',
   }),
 });
