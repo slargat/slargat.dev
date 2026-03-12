@@ -76,7 +76,7 @@
         "HonoJS",
         "NodeJS",
         "TypeScript",
-        "GitLab"
+        "Gitlab"
       ],
       "responsibilities": [
         "Industrialization of an existing prototype",
@@ -624,6 +624,16 @@
         "Collaboration",
         "Source Code",
         "Git"
+      ]
+    },
+    {
+      "name": "Astro",
+      "level": "Intermediate",
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "Static Site Generator",
+        "JavaScript Framework"
       ]
     }
   ],
