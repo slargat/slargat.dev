@@ -8,7 +8,24 @@ interface Props {
 
 const { title } = Astro.props;
 
-const { image, summary, url, theme } = basics;
+const { name, image, summary, url, location, theme } = basics;
+const ogImage = `${url}${image}`;
+const jsonLd = {
+	"@context": "https://schema.org",
+	"@type": "Person",
+	name,
+	url,
+	image: ogImage,
+	description: summary,
+	jobTitle: basics.label,
+	address: {
+		"@type": "PostalAddress",
+		addressLocality: location.city,
+		addressRegion: location.region,
+		addressCountry: location.countryCode,
+	},
+	sameAs: basics.profiles.map((p) => p.url).filter(Boolean),
+};
 ---
 
 <!doctype html>
@@ -17,7 +34,10 @@ const { image, summary, url, theme } = basics;
 		<meta charset="UTF-8" />
 		<title>{title}</title>
 		<meta name="description" content={summary} />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content={name} />
+		<meta name="robots" content="index, follow" />
+		<link rel="canonical" href={url} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="preload" as="image" href={image} />
 
@@ -25,14 +45,20 @@ const { image, summary, url, theme } = basics;
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={summary} />
-		<meta property="og:image" content="" />
+		<meta property="og:image" content={ogImage} />
+		<meta property="og:image:alt" content={`${name} profile photo`} />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:site_name" content={name} />
 
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta property="twitter:domain" content={url.split("//")[1] ?? ""} />
 		<meta property="twitter:url" content={url} />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={summary} />
-		<meta name="twitter:image" content="" />
+		<meta name="twitter:image" content={ogImage} />
+		<meta name="twitter:image:alt" content={`${name} profile photo`} />
+
+		<script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
 		<link
 			rel="stylesheet"

@@ -6,10 +6,13 @@ import tailwindcss from '@tailwindcss/vite';
 
 import cloudflare from '@astrojs/cloudflare';
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://slargat.dev',
   base: '/',
-  integrations: [],
+  integrations: [sitemap()],
 
   vite: {
     plugins: [tailwindcss()],
