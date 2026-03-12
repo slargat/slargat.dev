@@ -26,6 +26,7 @@
     "astro-font-picker": "^0.2.1",
     "astro-icon": "^1.1.5",
     "hotkeypad": "^1.0.1",
+    "sharp": "^0.34.5",
     "typescript": "^5.8.3",
     "wrangler": "^4.72.0"
   },
