@@ -1,10 +1,7 @@
 import { defineConfig } from 'astro/config';
 import { fileURLToPath } from "node:url"
-import path from 'path';
 
 import tailwindcss from '@tailwindcss/vite';
-
-import cloudflare from '@astrojs/cloudflare';
 
 import sitemap from '@astrojs/sitemap';
 
@@ -12,6 +9,7 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://slargat.dev',
   base: '/',
+  output: 'static',
   integrations: [sitemap()],
 
   vite: {
@@ -23,8 +21,4 @@ export default defineConfig({
       }
     }
   },
-
-  adapter: cloudflare({
-    imageService: { build: 'compile', runtime: 'cloudflare-binding' }
-  }),
 });
